@@ -1,0 +1,14 @@
+api_reservation_get:
+    path: /{id}.{format}
+    defaults: { _controller: AppBundle:Reservation:get, format: json }
+    methods: [GET]
+
+api_reservation_delete:
+    path: /{id}.{format}
+    defaults: { _controller: AppBundle:Reservation:delete, format: json }
+    methods: [DELETE]
+    
+api_reservation_put:
+    path: /{id}.{format}
+    defaults: { _controller: AppBundle:Reservation:modify, format: json }
+    methods: [PUT]
