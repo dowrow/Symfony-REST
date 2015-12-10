@@ -1,0 +1,46 @@
+# COURTS
+api_courts_get:
+    path: /courts.{format}
+    defaults: { _controller: AppBundle:Court:getAll, format: json }
+    methods:  [GET]
+
+api_courts_post:
+    path: /courts.{format}
+    defaults: { _controller: AppBundle:Court:create, format: json }
+    methods:  [POST]
+    
+api_courts:
+    resource: "@AppBundle/Resources/config/routing/courts.yml"
+    prefix: /courts
+
+# USERS
+api_users_get:    
+    path: /users.{format}
+    defaults: { _controller: AppBundle:User:getAll, format: json }
+    methods:  [GET]
+    
+api_users_post:    
+    path: /users.{format}
+    defaults: { _controller: AppBundle:User:create, format: json }
+    methods:  [POST]
+    
+api_users:
+    resource: "@AppBundle/Resources/config/routing/users.yml"
+    prefix: /users
+    
+# GROUPS
+api_groups_get:    
+    path: /groups.{format}
+    defaults: { _controller: AppBundle:Group:getAll, format: json }
+    methods:  [GET]
+    
+api_groups_post:    
+    path: /groups.{format}
+    defaults: { _controller: AppBundle:Group:create, format: json }
+    methods:  [POST]
+    
+api_groups:
+    resource: "@AppBundle/Resources/config/routing/groups.yml"
+    prefix: /groups
+    
+# RESERVATIONS

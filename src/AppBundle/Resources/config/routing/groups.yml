@@ -1,0 +1,19 @@
+api_group_get:
+    path: /{id}.{format}
+    defaults: { _controller: AppBundle:Group:get, format: json }
+    methods: [GET]
+
+api_group_delete:
+    path: /{id}.{format}
+    defaults: { _controller: AppBundle:Group:delete, format: json }
+    methods: [DELETE]
+    
+api_group_put:
+    path: /{id}.{format}
+    defaults: { _controller: AppBundle:Group:modify, format: json }
+    methods: [PUT]
+    
+api_group_user_post:
+    path: /{id}/users/{userId}.{format}
+    defaults: { _controller: AppBundle:Group:addUser, format: json }
+    methods: [POST]

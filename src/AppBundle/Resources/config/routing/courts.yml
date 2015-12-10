@@ -1,0 +1,14 @@
+api_court_get:
+    path: /{id}.{format}
+    defaults: { _controller: AppBundle:Court:get, format: json }
+    methods: [GET]
+
+api_court_delete:
+    path: /{id}.{format}
+    defaults: { _controller: AppBundle:Court:delete, format: json }
+    methods: [DELETE]
+    
+api_court_put:
+    path: /{id}.{format}
+    defaults: { _controller: AppBundle:Court:modify, format: json }
+    methods: [PUT]
