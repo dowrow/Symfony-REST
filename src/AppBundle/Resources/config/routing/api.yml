@@ -44,3 +44,16 @@ api_groups:
     prefix: /groups
     
 # RESERVATIONS
+api_reservations_get:    
+    path: /reservations.{format}
+    defaults: { _controller: AppBundle:Reservation:getAll, format: json }
+    methods:  [GET]
+    
+api_reservations_post:    
+    path: /reservations.{format}
+    defaults: { _controller: AppBundle:Reservation:create, format: json }
+    methods:  [POST]
+    
+api_reservations:
+    resource: "@AppBundle/Resources/config/routing/reservations.yml"
+    prefix: /reservations
